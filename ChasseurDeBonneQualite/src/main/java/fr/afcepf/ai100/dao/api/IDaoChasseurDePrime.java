@@ -5,10 +5,11 @@ import java.util.List;
 import fr.afcepf.ai100.entity.ChasseurDePrime;
 
 /**
- * Interface pour la définition des méthodes de CRUD de la table Chasseur de
+ * Interface pour la dÃ©finition des mÃ©thodes de CRUD de la table Chasseur de
  * prime.
  *
  * @author Stagiaire
+ * Ajout de javaDoc
  *
  */
 public interface IDaoChasseurDePrime {
@@ -17,24 +18,24 @@ public interface IDaoChasseurDePrime {
      * Ajoute un chasseur de prime dans la bdd.
      *
      * @param pChasseurDePrime
-     *            le chasseur de prime à ajouter.
-     * @return le chasseur de prime avec son id généré.
+     *            le chasseur de prime Ã  ajouter.
+     * @return le chasseur de prime avec son id gÃ©nÃ©rÃ©.
      */
     ChasseurDePrime ajouterChasseurDePrime(ChasseurDePrime pChasseurDePrime);
 
     /**
-     * Supprime le chasseur de prime désigné par son id de la bdd.
+     * Supprime le chasseur de prime dÃ©signÃ© par son id de la bdd.
      *
      * @param pIdChasseurDePrime
-     *            l'id du chasseur de prime à supprimer.
+     *            l'id du chasseur de prime Ã  supprimer.
      */
     void supprimerChasseurDePrime(int pIdChasseurDePrime);
 
     /**
-     * Recherche des chasseurs de prime par nom semblable à celui fourni.
+     * Recherche des chasseurs de prime par nom semblable Ã  celui fourni.
      *
      * @param pNom
-     *            : le nom de référence.
+     *            : le nom de rÃ©fÃ©rence.
      * @return la liste des chasseurs de prime dont le nom match pNom.
      */
     List<ChasseurDePrime> rechercherChasseurDePrimeParNom(String pNom);
@@ -54,12 +55,12 @@ public interface IDaoChasseurDePrime {
             float pTarifHaut);
 
     /**
-     * Regarde si un ChasseurDePrime avec le nom demandé existe déja dans la
+     * Regarde si un ChasseurDePrime avec le nom demandÃ© existe dÃ©ja dans la
      * bdd.
      *
      * @param pNom
-     *            le nom à rechercher.
-     * @return vrai si le nom est déja présent, faux autrement.
+     *            le nom Ã  rechercher.
+     * @return vrai si le nom est dÃ©ja prÃ©sent, faux autrement.
      */
     boolean nomDejaExistant(String pNom);
 }
